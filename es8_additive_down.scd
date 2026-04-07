@@ -17,7 +17,7 @@ SynthDef(\es8_additive_down, {
     freq = (200 + (pitch * 3000)).clip(30, 8000);
 
     gate = Schmidt.ar(trig, 0.1, 0.2);
-    gate = Lag.ar(gate, 0.005);
+    gate = Lag.ar(gate, 0.02);
 
     ratios = [0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 10, 12, 15, 20];
     snd = SinOsc.ar(freq * ratios);
